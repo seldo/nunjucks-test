@@ -2,4 +2,11 @@
 
 {% block main %}
 Does this work? Name is {{name}}.
+
+  <ul>
+  {% for entry in entries %}
+    <li>{{ entry.title }}</li>
+  {% endfor %}
+  </ul>
+
 {% endblock %}

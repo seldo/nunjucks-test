@@ -1,6 +1,6 @@
 function Content(connection) {
   this.db = connection
-  this.table = Content
+  this.table = 'content'
 }
 
 Content.prototype.getAll = function(limit,offset) {
@@ -9,7 +9,7 @@ Content.prototype.getAll = function(limit,offset) {
   if(!offset) offset = 0
 
   return this.db.select()
-    .from(this.table)
+    .table(this.table)
     .limit(limit)
     .offset(offset)
 

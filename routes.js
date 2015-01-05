@@ -3,7 +3,11 @@ module.exports = function(server,Controllers) {
   server.route({
     method: 'GET',
     path: '/blog',
-    handler: Controllers.Blog.index
+    handler: function(request,reply) {
+      // for some reason you have to do this wrapping
+      // or it loses everything. WTF hapi.
+      Controllers.Blog.index(request,reply)
+    }
   })
 
   server.route({

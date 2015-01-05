@@ -15,7 +15,7 @@ function Models(config) {
   });
 
   return {
-    Content: Content(connection)
+    Content: new Content(connection)
   }
 }
 

@@ -4,8 +4,11 @@ function Blog(Models) {
 
 Blog.prototype.index = function (request, reply) {
 
-  reply.view('index',{
-    'name': 'joe'
+  this.Models.Content.getAll(5).then(function(rows) {
+    reply.view('index',{
+      name: 'joe',
+      entries: rows
+    })
   })
 
 }
