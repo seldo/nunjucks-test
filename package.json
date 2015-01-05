@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^7.0.0"
+    "hapi": "^8.0.0",
+    "knex": "~0.7.3",
+    "mysql": "~2.5.4",
+    "nunjucks-hapi": "^1.1.0"
   }
 }
