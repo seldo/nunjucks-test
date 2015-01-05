@@ -10,7 +10,9 @@ var server = new Hapi.Server()
 server.connection({host: 'localhost', port:port})
 
 // initialize Models
-var models = new Models({config:"would go here"})
+var models = new Models({
+
+})
 var controllers = new Controllers(models)
 
 // set up templates and views
