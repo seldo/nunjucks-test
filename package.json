@@ -1,10 +1,12 @@
 {
-  "name": "nunjuckstest",
+  "name": "@seldo/seldo.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev-www": "nodemon -e js,html index.js",
+    "dev-css": "stylus --watch --compress assets/styles/ -o static/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,5 +16,8 @@
     "knex": "~0.7.3",
     "mysql": "~2.5.4",
     "nunjucks-hapi": "^1.1.0"
+  },
+  "devDependencies": {
+    "stylus": "~0.49.3"
   }
 }

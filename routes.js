@@ -43,4 +43,14 @@ module.exports = function(server,Controllers) {
     }
   })
 
+  server.route({
+    method: 'GET',
+    path: '/static/{param*}',
+    handler: {
+      directory: {
+        path: 'static'
+      }
+    }
+  });
+
 }
