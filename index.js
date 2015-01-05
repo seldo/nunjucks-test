@@ -9,21 +9,24 @@ var port = 8000
 var server = new Hapi.Server()
 server.connection({host: 'localhost', port:port})
 
+// initialize Models
+var models = Models({config:"would go here"})
+var controllers = Controllers(models)
+
+console.log("Blog: " + controllers.Blog.index)
+
+// set up templates and views
 var viewPath = Path.join(__dirname, 'views')
-
 Nunjucks.configure(viewPath)
-
-// set up templates
 server.views({
   engines: {
-    //hbs: require('handlebars')
     html: Nunjucks
   },
   path: viewPath
 })
 
 // set up the routes
-var routes = require('./routes')(server,Controllers)
+var routes = require('./routes')(server,controllers)
 
 // Start the server
 server.start(function() {

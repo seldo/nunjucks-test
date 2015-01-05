@@ -2,7 +2,7 @@ var Blog = require('./blog')
 
 function Controllers(Models) {
   return {
-    Blog: Blog(Models)
+    Blog: new Blog(Models)
   }
 }
 
