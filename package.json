@@ -7,15 +7,22 @@
     "start": "node index.js",
     "dev-www": "nodemon -e js,html index.js",
     "dev-css": "stylus --watch --compress assets/styles/ -o static/css/",
+    "dev-js": "watchify -d assets/js/main.js -o static/main.js",
+    "dev": "node ./dev/go.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "backbone": "^1.1.2",
     "hapi": "^8.0.0",
+    "jquery": "^2.1.3",
     "knex": "~0.7.3",
+    "lodash": "^3.6.0",
     "mysql": "~2.5.4",
-    "nunjucks-hapi": "^1.1.0"
+    "nunjucks-hapi": "^1.1.0",
+    "stylus": "^0.50.0",
+    "watchify": "^2.6.2"
   },
   "devDependencies": {
     "stylus": "~0.49.3"

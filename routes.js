@@ -43,6 +43,7 @@ module.exports = function(server,Controllers) {
     }
   })
 
+  // static assets
   server.route({
     method: 'GET',
     path: '/static/{param*}',

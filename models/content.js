@@ -9,7 +9,8 @@ Content.prototype.getAll = function(limit,offset) {
   if(!offset) offset = 0
 
   return this.db.select()
-    .table(this.table)
+    .from(this.table)
+    .orderBy('created','desc')
     .limit(limit)
     .offset(offset)
 
