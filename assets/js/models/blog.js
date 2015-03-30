@@ -1,4 +1,6 @@
-var Backbone = require('backbone')
+var $ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = $;
 
 var BlogModel = Backbone.Model.extend({
   initialize: function (opts) {

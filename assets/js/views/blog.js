@@ -1,14 +1,15 @@
-var Backbone = require('backbone')
+var Backbone = require('backbone');
+var $ = require('jquery');
+Backbone.$ = $;
 
-var ScrollView = Backbone.View.extend({
-  columns: [],
-  itemCount: -1,
-  initialize: function (opts) {
-    var self = this
-    this.options = opts.options
+module.exports = Backbone.View.extend({
+  initialize: function(){
+    this.render();
   },
-  render: function() {
-    console.log("rendering view")
-    return this
+
+  render: function(){
+    console.log("hi")
+    console.log($('body'))
+    $('body').prepend('<p>wooooooooooooooo</p>');
   }
-})
+});
