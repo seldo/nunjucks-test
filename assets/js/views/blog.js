@@ -9,7 +9,6 @@ module.exports = Backbone.View.extend({
 
   render: function(){
     console.log("hi")
-    console.log($('body'))
-    $('body').prepend('<p>wooooooooooooooo</p>');
+    this.$el.prepend('<p>wooooooooooooooo</p>');
   }
 });
