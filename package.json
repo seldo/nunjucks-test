@@ -8,7 +8,7 @@
     "dev-www": "nodemon -e js,html index.js",
     "dev-css": "stylus --watch --compress assets/styles/ -o static/css/",
     "dev-js": "watchify -d assets/js/main.js -o static/main.js",
-    "dev": "node ./dev/go.js",
+    "dev": "npm run dev-www && npm run dev-css && npm run dev-js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
